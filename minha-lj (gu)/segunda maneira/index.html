@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - Agendamentos</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="./segunda maneira/progt/ADIMINISTRA-O-26-09-2025 (1).png" alt="ADMINISTRAÇÃO" class="titulo-img">
+        </header>
+
+        <div class="modulo-agendar">
+            <h2 class="subtitulo">Marque seu Agendamento:</h2>
+            <form action="#" method="POST" class="formulario-agendar">
+                <label for="data-agendamento">Escolha a Data Desejada:</label>
+                <input type="date" id="data-agendamento" name="data-agendamento" required min="2025-10-01" max="2026-12-31">
+                <input type="text" placeholder="Seu Nome Completo" required>
+                <input type="tel" placeholder="Seu Telefone (XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+                <button type="submit" class="btn-enviar">ENVIAR AGENDAMENTO</button>
+            </form>
+        </div>
+        
+        <hr class="divisor">
+
+        <h2 class="subtitulo">Status dos Próximos Meses:</h2>
+        
+        <div class="calendario-nav">
+            <a href="#novembro" class="nav-link">← Novembro 2025</a>
+            <a href="#outubro" class="nav-link">Outubro 2025 →</a>
+        </div>
+        
+        <div class="calendario-modulo" id="outubro">
+            <div class="calendario-header-mes">Outubro 2025</div>
+            <table class="calendario">
+                <thead>
+                    <tr>
+                        <th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th><th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td><td>14</td><td class="dia-status-feito">15</td><td class="dia-status-pendente">16</td><td>17</td><td>18</td><td>19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td><td class="dia-status-negado">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td><td class="dia-status-pendente">28</td><td>29</td><td>30</td><td class="dia-status-feito">31</td><td class="dia-proximo-mes">1</td><td class="dia-proximo-mes">2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="calendario-modulo" id="novembro">
+            <div class="calendario-header-mes">Novembro 2025</div>
+            <table class="calendario">
+                <thead>
+                    <tr>
+                        <th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th><th>Dom</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td><td></td><td></td><td></td><td></td><td>1</td><td class="dia-status-negado">2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td class="dia-status-feito">4</td><td>5</td><td>6</td><td class="dia-status-pendente">7</td><td>8</td><td>9</td>
+                    </tr>
+                    <tr>
+                        <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+                    </tr>
+                    <tr>
+                        <td class="dia-status-feito">17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+                    </tr>
+                    <tr>
+                        <td>24</td><td>25</td><td class="dia-status-pendente">26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="agendamentos-lista">
+            <h2 class="subtitulo">Agendamentos Detalhados:</h2>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 15 (OUT)</span> : **Pedro Santos** | Horário: 15:00 | Tel: **(11) 98765-4321** | CPF: **123.456.789-01**
+            </p>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 16 (OUT)</span> : **Ravi Almeida** | Horário: 18:00 | Tel: **(21) 99888-7777** | CPF: **234.567.890-12**
+            </p>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 21 (OUT)</span> : **Heitor Costa** | Horário: 19:00 | Tel: **(31) 97171-7171** | CPF: **345.678.901-23**
+            </p>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 28 (OUT)</span> : **Devid Oliveira** | Horário: 11:00 | Tel: **(41) 96565-6565** | CPF: **456.789.012-34**
+            </p>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 31 (OUT)</span> : **Bruno Ferreira** | Horário: 15:00 | Tel: **(85) 99191-9191** | CPF: **567.890.123-45**
+            </p>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 04 (NOV)</span> : **Maria Silva** | Horário: 10:00 | Tel: **(51) 98080-8080** | CPF: **678.901.234-56**
+            </p>
+            <p class="agendamento">
+                <span class="dia-numero">DIA 07 (NOV)</span> : **Lucas Rocha** | Horário: 16:00 | Tel: **(61) 95454-5454** | CPF: **789.012.345-67**
+            </p>
+
+            <a href="#" class="btn-mais">ver mais</a>
+        </div>
+        
+        <a href="#" class="btn-home">Voltar ao Home</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputData = document.getElementById('data-agendamento');
+            const celulasDia = document.querySelectorAll('.calendario td');
+            
+            // Mapeamento dos meses e anos (Formato YYYY-MM)
+            const mesesMapeamento = {
+                'outubro': '2025-10',
+                'novembro': '2025-11'
+                // Adicione outros módulos de calendário aqui
+            };
+
+            celulasDia.forEach(celula => {
+                // O clique só deve funcionar em dias válidos
+                if (!celula.classList.contains('dia-proximo-mes')) {
+                    celula.style.cursor = 'pointer'; 
+                    
+                    celula.addEventListener('click', function() {
+                        const diaNumero = celula.textContent.trim();
+                        
+                        const moduloPai = celula.closest('.calendario-modulo');
+                        const idModulo = moduloPai ? moduloPai.id : null; 
+
+                        // Checa se o dia já tem um status (Verde, Amarelo, Vermelho)
+                        const isAgendado = celula.classList.contains('dia-status-feito') ||
+                                           celula.classList.contains('dia-status-pendente') ||
+                                           celula.classList.contains('dia-status-negado');
+
+                        if (isAgendado) {
+                            alert('Este dia já possui um agendamento marcado/pendente. Por favor, escolha outra data disponível.');
+                            return; 
+                        }
+
+                        if (diaNumero && mesesMapeamento[idModulo]) {
+                            // Monta a data no formato AAAA-MM-DD
+                            const diaFormatado = diaNumero.padStart(2, '0');
+                            const dataFormatada = `${mesesMapeamento[idModulo]}-${diaFormatado}`;
+                            
+                            // 1. Preenche o input
+                            inputData.value = dataFormatada;
+                            
+                            // 2. Feedback visual: Limpar seleção anterior e marcar a nova
+                            document.querySelectorAll('.dia-selecionado').forEach(d => {
+                                d.classList.remove('dia-selecionado');
+                            });
+                            
+                            celula.classList.add('dia-selecionado');
+                            
+                            // Rola para o formulário
+                            inputData.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    });
+                }
+            });
+
+            // Lógica para interceptar o envio e mostrar um alerta (Simulação)
+            const formAgendar = document.querySelector('.formulario-agendar');
+            formAgendar.addEventListener('submit', function(event) {
+                event.preventDefault(); // Impede o envio real para o servidor
+
+                const data = document.getElementById('data-agendamento').value;
+                const nome = formAgendar.querySelector('input[type="text"]').value;
+
+                if (data) {
+                    alert(`Agendamento Solicitado!\nNome: ${nome}\nData: ${data}\n\nAguarde a confirmação para que o dia fique amarelo no calendário.`);
+                    formAgendar.reset(); 
+                    // Em um sistema real, o código de envio ao servidor estaria aqui.
+                } else {
+                    alert('Por favor, selecione uma data no calendário ou preencha o campo de data.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
